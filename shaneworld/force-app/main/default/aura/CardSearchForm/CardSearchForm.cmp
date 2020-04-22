@@ -1,0 +1,55 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="searchCard" type="YuGiOh_Card__c" default="{'sobjectType': 'YuGiOh_Card__c',
+                                                                     'Name' : '',
+                                                                     'Card_Frame__c':'',
+                                                                     'Description__c':'',
+                                                                     'Attack__c': 0,
+                                                                     'Defense__c' : 0,
+                                                                     'Level__c' : 0,
+                                                                     'Monster_Type__c':'',
+                                                                     'Attribute__c': ''}"/>
+    
+    <aura:registerEvent name="cardSearch" type="c:CardIsSearched"/>
+    
+    <form class="slds-form--stacked">
+        <lightning:input aura:id="searchForm" 
+                         label="Card Name"
+                         name="cardName"
+                         value="{!v.searchCard.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Card Frame"
+                         name="cardFrame"
+                         value="{!v.Card_Frame__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Card Description"
+                         name="cardDesc"
+                         value="{!v.Description__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Attack"
+                         name="attack"
+                         type="number"
+                         value="{!v.Attack__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Defense"
+                         name="defense"
+                         type="number"
+                         value="{!v.Defense__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Level/Rank/Link"
+                         name="level"
+                         type="number"
+                         value="{!v.Level__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Monster Type"
+                         name="monsterType"
+                         value="{!v.Monster_Type__c.Name}" />
+        <lightning:input aura:id="searchForm" 
+                         label="Attribute"
+                         name="attribute"
+                         value="{!v.Attribute__c.Name}" />
+        <lightning:button label="Search" 
+                          class="slds-m-top--medium"
+                          variant="brand"
+                          onclick="{!c.clickSearch}"/>
+    </form>
+</aura:component>
