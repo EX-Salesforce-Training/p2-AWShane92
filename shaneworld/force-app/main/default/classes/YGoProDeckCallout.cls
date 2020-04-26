@@ -6,7 +6,7 @@ public with sharing class YGoProDeckCallout
     
     //This method is unabled to be ran due to the amount of all cards in the 
     //API database. 
-    @AuraEnabled
+    //@AuraEnabled
     public static List<YuGiOh_Card__c> displayAllCards()
     {        
         calloutResponse(null);
