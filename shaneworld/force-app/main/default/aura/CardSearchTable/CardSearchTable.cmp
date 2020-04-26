@@ -1,6 +1,12 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
     <aura:attribute name="cardList" type="YuGiOh_Card__c[]"/>
+    
     <aura:iteration items="{!v.cardList}" var="card">
         <c:DisplayCard cardData="{!card}"/> 
-    </aura:iteration>    
+    </aura:iteration> 
+    <div class="slds-align_absolute-center">
+        <aura:if isTrue="{! empty(v.cardList)}">
+            <p>No Records Found.</p>
+        </aura:if>
+    </div>
 </aura:component>

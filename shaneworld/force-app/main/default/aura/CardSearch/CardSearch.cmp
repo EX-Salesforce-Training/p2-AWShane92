@@ -14,7 +14,7 @@
     </lightning:layout>
     <lightning:layout>
         <lightning:layoutItem>
-            <c:CardSearchTable cardList="{!v.cardList}"/> 
+            <c:CardSearchTable cardList="{!v.cardList}"/>
         </lightning:layoutItem>           
     </lightning:layout>
 </aura:component>

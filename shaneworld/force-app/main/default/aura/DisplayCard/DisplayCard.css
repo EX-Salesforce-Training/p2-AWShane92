@@ -1,0 +1,6 @@
+.THIS .card-body{
+   display: table;
+}
+.THIS .card-body_element{
+     display: inline-block;
+}

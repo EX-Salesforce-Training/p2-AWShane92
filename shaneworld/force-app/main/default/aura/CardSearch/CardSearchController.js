@@ -7,7 +7,7 @@
         });        
         action.setCallback(this, function(response) {
             var state = response.getState();
-            if (state === "SUCCESS") {
+            if (state === "SUCCESS") {                
                 component.set("v.cardList", response.getReturnValue());
             }
             else {

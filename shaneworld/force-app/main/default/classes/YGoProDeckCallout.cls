@@ -104,7 +104,7 @@ public with sharing class YGoProDeckCallout
                                                 Card_Frame__c = String.valueOf(cardData.get('type')), 
                                                 Description__c = String.valueOf(cardData.get('desc')),
                                                 Monster_Type__c = String.valueOf(cardData.get('race')),
-                                                Primary_Image__c = String.valueOf(imageMap.get('image_url'))
+                                                Primary_Image__c = String.valueOf(imageMap.get('image_url_small'))
                                                )); 
             }
             else
