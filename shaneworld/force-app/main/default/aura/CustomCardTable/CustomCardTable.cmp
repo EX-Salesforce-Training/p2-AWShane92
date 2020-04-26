@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="CardBuilderController">
+    
+    <aura:attribute name="cardList" type="YuGiOh_Card__c[]"/>
+    <aura:attribute name="error" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" action="{!c.onInit}" value="{!this}"/>
+    
+    <aura:iteration items="{!v.cardList}" var="card">
+      <c:DisplayCard cardData="{!card}"/>  
+    </aura:iteration>
+    
+    <aura:if isTrue="{!v.error}">
+        <p>No records were found.</p>
+    </aura:if>    
+</aura:component>

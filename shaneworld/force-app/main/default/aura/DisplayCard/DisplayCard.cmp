@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="cardData" type="YuGiOh_Card__c"/>
+    
+    <lightning:card title="{! v.cardData.Name}">  
+        <aura:set attribute="title">
+            <img src="{!v.cardData.Primary_Image__c}"/>
+            <lightning:formattedRichText value="{! v.cardData.Name}"/>
+        </aura:set>
+		<aura:set attribute="footer">
+        </aura:set> 
+        <lightning:formattedRichText value="{! v.cardData.Description__c}"/>
+    </lightning:card>
+</aura:component>

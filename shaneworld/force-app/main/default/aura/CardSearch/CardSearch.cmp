@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,forceCommunity:availableForAllPageTypes" 
+                access="global" 
+                controller="YGoProDeckCallout" >
+    
+    <aura:attribute name="baseCard" type="YuGiOh_Card__c" default="{'Name': 'Dark Magician'}"/>
+    <aura:attribute name="cardList" type="YuGiOh_Card__c[]"/>
+    <aura:handler name="init" action="{!c.onInit}" value="{!this}"/>
+    <aura:handler name="cardSearched" event="c:CardIsSearched" action="{!c.onSearch}"/>
+    
+    <lightning:layout>
+        <lightning:layoutItem>
+            <c:CardSearchForm/>
+        </lightning:layoutItem>           
+    </lightning:layout>
+    <lightning:layout>
+        <lightning:layoutItem>
+            <c:CardSearchTable cardList="{!v.cardList}"/> 
+        </lightning:layoutItem>           
+    </lightning:layout>
+</aura:component>

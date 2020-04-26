@@ -1,3 +1,4 @@
 <aura:application >
-    <c:CardSearchForm/>
+    <!--<c:CardSearch/>-->
+    <c:CustomCardTable/>
 </aura:application>
