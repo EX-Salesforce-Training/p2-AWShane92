@@ -4,7 +4,7 @@ public with sharing class CustomCardHandler
     public static void linkImage(List<ID> recordId)
     {
         List<YuGiOh_Card__c> cardList = [SELECT Id FROM YuGiOh_Card__c WHERE Id =: recordId];
-        
+
         for(YuGiOh_Card__c yc: cardList)
         {	
             try{
