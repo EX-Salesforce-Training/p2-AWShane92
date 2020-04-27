@@ -7,8 +7,6 @@
     
     <aura:handler name="init" action="{!c.onInit}" value="{!this}"/>
     
-    <lightning:button variant="brand" label="Refresh" title="Refresh Card List" onclick="{! c.onInit}" />
-    
     <aura:iteration items="{!v.cardList}" var="card">
       <c:DisplayCustomCard cardData="{!card}"/>  
     </aura:iteration>

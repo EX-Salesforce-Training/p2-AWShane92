@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
     <aura:attribute name="cardList" type="YuGiOh_Card__c[]"/>
     
     <aura:iteration items="{!v.cardList}" var="card">

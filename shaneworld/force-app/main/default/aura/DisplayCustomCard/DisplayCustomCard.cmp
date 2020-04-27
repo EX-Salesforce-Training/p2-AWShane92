@@ -1,6 +1,6 @@
 <aura:component >
     <aura:attribute name="cardData" type="YuGiOh_Card__c"/>
-    <aura:handler name="init" action="{!c.displayImage}" value="{!this}"/>	
+    <!--<aura:handler name="init" action="{!c.displayImage}" value="{!this}"/>-->
     
     <lightning:card title="{! v.cardData.Name}">  
         <aura:set attribute="title">
@@ -10,7 +10,9 @@
         </aura:set> 
         <div class="card-body">
             <div class="card-body_element">
-                <img aura:id="cardFrameImg" src="{!'/resource/'+ v.cardData.Card_Frame__c }" width="175" height="250"/>               
+                <img aura:id="cardFrameImg" 
+                     src="{!'/sfsites/c/resource/'+ v.cardData.Card_Frame__c }"
+                     width="175" height="250"/>               
             </div>
             <div class="card-body_element">
                 <lightning:formattedRichText value="{! v.cardData.Description__c}"/>
@@ -18,4 +20,4 @@
         </div>
     </lightning:card>
 </aura:component>
-<!-- {!'/resource/'+ v.cardData.Card_Frame__c } -->
+<!-- {!'https://king-of-games-dev-ed.lightning.force.com/resource/'+ v.cardData.Card_Frame__c } -->
